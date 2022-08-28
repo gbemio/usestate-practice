@@ -1,17 +1,31 @@
 import React from "react";
-import "./App.css";
 
-const App = () => {
-  const result = React.useState("Yes");
-  console.log(result);
+export default function App() {
+  /**
+   * Challenge:
+   * Add functionality to the minus button
+   */
+  const [count, setCount] = React.useState(0);
+
+  function add() {
+    setCount(count + 1);
+  }
+
+  function minus() {
+    setCount(count - 1);
+  }
+
   return (
-    <div className="state">
-      <h1 className="state--title">Is state important to know?</h1>
-      <div className="state--value">
-        <h1>{result[0]}</h1>
+    <div className="counter">
+      <button className="counter--minus" onClick={minus}>
+        –
+      </button>
+      <div className="counter--count">
+        <h1>{count}</h1>
       </div>
+      <button className="counter--plus" onClick={add}>
+        +
+      </button>
     </div>
   );
-};
-
-export default App;
+}
