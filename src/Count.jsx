@@ -1,6 +1,6 @@
 import React from "react";
 
-const Count = (number) => {
+const Count = () => {
   return <div></div>;
 };
 
