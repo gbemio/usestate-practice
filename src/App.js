@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import Count from "./Count.jsx";
 
 export default function App() {
   /**
@@ -21,9 +22,7 @@ export default function App() {
       <button className="counter--minus" onClick={minus}>
         –
       </button>
-      <div className="counter--count">
-        <h1>{count}</h1>
-      </div>
+      <Count number={count} />
       <button className="counter--plus" onClick={add}>
         +
       </button>
